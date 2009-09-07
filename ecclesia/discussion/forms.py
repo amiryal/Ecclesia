@@ -1,10 +1,10 @@
 from ecclesia.discussion.models import Story
-
 from django import forms
-
 from django.contrib.contenttypes.models import ContentType
+from tinymce.widgets import TinyMCE
 
 class StoryForm(forms.ModelForm):
+    content = forms.CharField(widget=TinyMCE)
     content_type = forms.ModelChoiceField(queryset=ContentType.objects.all(), widget=forms.HiddenInput)
     object_id = forms.IntegerField(widget=forms.HiddenInput)
     

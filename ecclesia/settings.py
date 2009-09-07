@@ -58,7 +58,7 @@ SECRET_KEY = 'vo%ti0wyf#vx@d+5rnk^0rk%gi2l8ls4-i9#l5q_(b+**f43oj'
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.load_template_source',
     'django.template.loaders.app_directories.load_template_source',
-#     'django.template.loaders.eggs.load_template_source',
+     'django.template.loaders.eggs.load_template_source',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -84,6 +84,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.sites',
     'django.contrib.admin',
+    'tinymce',
     'groups',
     'goals',
     'discussion',
